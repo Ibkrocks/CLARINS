@@ -1,0 +1,94 @@
+{
+  "name": "@nicky-lenaers/ngx-scroll-to-demo",
+  "description": "Demo Application for @nicky-lenaers/ngx-scroll-to package.",
+  "version": "14.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start:demo": "ng serve ngx-scroll-to-demo",
+    "build": "yarn build:lib && yarn build:demo",
+    "build:lib": "ng build ngx-scroll-to",
+    "build:demo": "ng build ngx-scroll-to-demo",
+    "test": "ng test --watch=false --no-progress --browsers=ChromeHeadless",
+    "test:lib": "ng test ngx-scroll-to --watch=false",
+    "test:demo": "ng test ngx-scroll-to-demo --watch=false",
+    "test:watch": "ng test --watch=true --configuration development",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "copy:readme": "copyfiles README.md ./dist/ngx-scroll-to",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "github-releaser": "conventional-github-releaser -p angular",
+    "lib:package": "yarn build:lib && yarn copy:readme && cd ./dist/ngx-scroll-to && yarn pack",
+    "prelib:publish": "yarn lib:package",
+    "lib:publish": "cd ./dist/ngx-scroll-to && yarn publish --access=public",
+    "tags": "yarn tag list @nicky-lenaers/ngx-scroll-to",
+    "prepare": "husky install"
+  },
+  "private": false,
+  "contributors": [
+    {
+      "name": "Robbert van Caem"
+    }
+  ],
+  "author": {
+    "name": "Nicky Lenaers",
+    "email": "nicky@newgameplus.online"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicky-lenaers/ngx-scroll-to.git"
+  },
+  "homepage": "https://github.com/nicky-lenaers/ngx-scroll-to#readme",
+  "bugs": {
+    "url": "https://github.com/nicky-lenaers/ngx-scroll-to/issues"
+  },
+  "dependencies": {
+    "@angular/animations": "^14.2.7",
+    "@angular/common": "^14.2.7",
+    "@angular/compiler": "^14.2.7",
+    "@angular/core": "^14.2.7",
+    "@angular/forms": "^14.2.7",
+    "@angular/platform-browser": "^14.2.7",
+    "@angular/platform-browser-dynamic": "^14.2.7",
+    "@angular/router": "^14.2.7",
+    "rxjs": "~7.5.7",
+    "tslib": "^2.4.0",
+    "zone.js": "~0.11.8"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.6",
+    "@angular-eslint/builder": "^14.1.2",
+    "@angular-eslint/eslint-plugin": "^14.1.2",
+    "@angular-eslint/eslint-plugin-template": "^14.1.2",
+    "@angular-eslint/schematics": "^14.1.2",
+    "@angular-eslint/template-parser": "^14.1.2",
+    "@angular/cli": "^14.2.6",
+    "@angular/compiler-cli": "^14.2.7",
+    "@angular/language-service": "^14.2.7",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-angular": "^17.1.0",
+    "@cypress/schematic": "^2.2.0",
+    "@types/jasmine": "~4.3.0",
+    "@types/node": "^16.11.45",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "conventional-changelog-cli": "^2.2.2",
+    "conventional-github-releaser": "^3.1.5",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.26.0",
+    "husky": "^8.0.1",
+    "jasmine-core": "~4.4.0",
+    "karma": "~6.4.1",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage-istanbul-reporter": "~3.0.3",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "^2.0.0",
+    "ng-packagr": "^14.2.1",
+    "typescript": "~4.8.4",
+    "cypress": "^10.10.0"
+  },
+  "engines": {
+    "node": ">=16.18.0",
+    "yarn": ">=1.22.18"
+  }
+}

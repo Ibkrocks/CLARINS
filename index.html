@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CLARINS® : Best Skin Care, Makeup, Face & Body Creams®</title>
+		<link rel="icon" type="image/png" href="/clarins-pictures/fav-icon.png" sizes="192x192" />
+		<link rel="stylesheet" href="https://cdn.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+		<script src="angular-1.5.7/angular.min.js"></script>
+		<script src="angular-1.5.7/angular-route.min.js"></script>
+		<script src="angular-1.5.7/"></script>
+		<script src="ngx-scroll-to-master/package.json"></script>
+		<link rel="stylesheet" href="CSS folder/">
+		<script src="https://kit.fontawesome.com/6e77cbba46.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="clarins.css"/>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="navbar">
+				<ul class="navbar-nav">
+					<li>
+						<a class="nav-link" id="nav-home" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="nav-products" href="#Products">Products</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="nav-gallery" href="#gallery">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="nav-about" href="#Aboutus">About us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="nav-map" href="#map">site map</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="nav-contact" href="#contactUs">Contact us</a>
+					</li>
+				</ul>
+				<span class="logo" href="#">
+					<img class="clarins-logo" alt="Clarins" src="https://www.clarinsusa.com/on/demandware.static/-/Library-Sites-clarins-v3/default/dwa9b9de66/images/logo-cba.svg" title="" />
+				</span>
+				<div class="reset-buttons">
+					<div class="WVC"> Visitor Count&#8594; <i class="fa-solid fa-people-simple"></i>
+					</div>
+					<div class="website-counter"></div>
+					<button id="reset">RESET</button>
+				</div>
+				<div class="hamburger" id="#menu-bar">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+		<div ng-app="myApp">
+			<!-- Carousel -->
+			<div>
+				<div ng-controller="HomeCtrl">
+					<div class="slideshow">
+						<img ng-src="{{currentImage.src}}" alt="{{currentImage.alt}}" />
+						<div class="slideshow-caption">
+							<h3>{{currentImage.title}}</h3>
+							<p>{{currentImage.description}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ng-view></ng-view>
+			<br>
+			<br>
+			<div class="banner-text">
+				<h1>WELCOME TO CLARINS SKINCARE</h1>
+				<div class="p">we are here with the genuine passion to deliver real and natural beauty solutuons </div>
+			</div>
+			<br>
+			<!--for the product pop up-->
+			<div class="container" id="Products">
+				<h3 class="title">Products</h3>
+				<div class="pro_name1"></div>
+				<div class="pro_name1">
+					<h3>BODY</h3>
+					<div class="products-container">
+						<div class="product" data-name="p-4">
+							<button type="button" class="btn-close" aria-label="Close"></button>
+							<img src="clarins-pictures\body-cream1.jpg" alt="">
+							<h3>Body Fit Anti-Cellulite Contouring Expert</h3>
+						</div>
+						<div class="product" data-name="p-5">
+							<img src="clarins-pictures\Sunscreen1.jpg" alt="Sunscreen">
+							<h3>UV PLUS Anti-Pollution Sunscreen Multi-Protection Broad Spectrum SPF 50</h3>
+						</div>
+						<div class="product" data-name="p-6">
+							<img src="clarins-pictures/energy-emulsion1.jpg" alt="">
+							<h3>Energizing Emulsion</h3>
+						</div>
+					</div>
+					<div class="pro_name1">
+						<h3>MAKEUP</h3>
+						<div class="products-container">
+							<div class="product" data-name="p-7">
+								<img src="clarins-pictures/foundation1.jpg" alt="">
+								<h3>Skin Illusion Foundation</h3>
+							</div>
+							<div class="product" data-name="p-8">
+								<img src="clarins-pictures/mascara1.jpg" alt="">
+								<h3>Supra Volume Mascara</h3>
+							</div>
+							<div class="product" data-name="p-9">
+								<img src="clarins-pictures/eye-liner1.jpg" alt="">
+								<h3>Graphik Ink Liner Liquid Eyeliner Pen</h3>
+							</div>
+							<div class="product" data-name="p-10">
+								<img src="clarins-pictures/lipstick1.jpg" alt="">
+								<h3>Lip Comfort Oil</h3>
+							</div>
+							<div class="product" data-name="p-11">
+								<img src="clarins-pictures/make-up-remover1.jpg" alt="">
+								<h3>Instant Eye Make-Up Remover</h3>
+							</div>
+							<div class="product" data-name="p-12">
+								<img src="clarins-pictures/concealer1.jpg" alt="">
+								<h3>Everlasting Concealer</h3>
+							</div>
+						</div>
+						<div class="pro_name1">
+							<h3>PERFUMES</h3>
+							<div class="products-container">
+								<div class="product" data-name="p-13">
+									<img src="clarins-pictures/extraordinary1.jpg" alt="">
+									<h3>Eau Extraordinaire Treatment Fragrance Spray</h3>
+								</div>
+								<div class="product" data-name="p-14">
+									<img src="clarins-pictures/ressourcante1.jpg" alt="">
+									<h3>Eau Ressourçante Treatment Fragrance Spray</h3>
+								</div>
+								<div class="product" data-name="p-15">
+									<img src="/clarins-pictures/dynamisant1.jpg" alt="">
+									<h3>Eau Dynamisante <br> Treatment Fragrance Spray </h3>
+								</div>
+							</div>
+							<div class="pro_name1">
+								<h3>HAIR CARE</h3>
+								<div class="products-container">
+									<div class="product" data-name="p-17">
+										<img src="/clarins-pictures/hair-conditioner1.jpg" alt="">
+										<h3>Invigorating Shine Hair Conditioner</h3>
+									</div>
+									<div class="product" data-name="p-18">
+										<img src="/clarins-pictures/shampoo-bar1.jpg" alt="">
+										<h3>Nourishing Shampoo Bar</h3>
+									</div>
+									<div class="product" data-name="p-19">
+										<img src="clarins-pictures/hair-oil1.jpg" alt="">
+										<h3>Nourishing Beauty Hair Oil with Camellia Oil</h3>
+									</div>
+								</div>
+								<div class="pro_name1">
+									<h3>MEN</h3>
+									<div class="products-container">
+										<div class="product" data-name="p-20">
+											<img src="clarins-pictures/shave-foam-gel1.jpg" alt="">
+											<h3>ClarinsMen Smooth Shave Foaming Gel</h3>
+										</div>
+										<div class="product" data-name="p-21">
+											<img src="clarins-pictures/men-shampoo1.jpg" alt="">
+											<h3>ClarinsMen Shampoo & Shower</h3>
+										</div>
+									</div>
+								</div>
+								<!--products preview part-->
+								<div class="products-preview" ng-controller="myController">
+									<div>
+										<div class="image-container">
+											<div class="preview" data-target="p-4">
+												<button class="scrollable-button previous" ng-click="previousImage()">
+													<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+												</button>
+												<button class="scrollable-button next" ng-click="nextImage()">
+													<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+												</button>
+												<i class="fa-solid fa-xmark"></i>
+												<img src="{{currentImage}}" alt="">
+												<h3>body fit</h3>
+												<div class="stars">
+													<i class="fas fa-star"></i>
+													<i class="fas fa-star"></i>
+													<i class="fas fa-star"></i>
+													<i class="fas fa-star"></i>
+													<i class="fas fa-star-half-alt"></i>
+												</div>
+												<p>Contouring cream-gel that targets cellulite and visibly smoothes, firms and lifts. </p>
+												<div class="price">&#8358;10000</div>
+												<div class="buttons">
+													<a href="#" class="buy">buy now</a>
+													<a href="#" class="cart">add to cart</a>
+												</div>
+											</div>
+										</div>
+										<div class="preview" data-target="p-5">
+											<button class="scrollable-button previous" ng-click="previousImage1()">
+												<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+											</button>
+											<button class="scrollable-button next" ng-click="nextImage1()">
+												<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+											</button>
+											<i class="fa-solid fa-xmark"></i>
+											<img src="{{currentImage1}}" alt="">
+											<h3>UV PLUS Anti-Pollution Sunscreen</h3>
+											<div class="stars">
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star-half-alt"></i>
+											</div>
+											<p>Oil-free, daily multi-protection UV sunscreen with broad spectrum SPF 50.</p>
+											<div class="price">&#8358;13500</div>
+											<div class="buttons">
+												<a href="#" class="buy">buy now</a>
+												<a href="#" class="cart">add to cart</a>
+											</div>
+										</div>
+										<div class="preview" data-target="p-6">
+											<button class="scrollable-button previous" ng-click="previousImage2()">
+												<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+											</button>
+											<button class="scrollable-button next" ng-click="nextImage2()">
+												<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+											</button>
+											<i class="fa-solid fa-xmark"></i>
+											<img src="{{currentImage2}}" alt="">
+											<h3>Energizing Emulsion</h3>
+											<div class="stars">
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star-half-alt"></i>
+											</div>
+											<p>Lightweight, energizing lotion that refreshes and soothes tired legs and feet, while hydrating and softening skin.</p>
+											<div class="price">&#8358;15000</div>
+											<div class="buttons">
+												<a href="#" class="buy">buy now</a>
+												<a href="#" class="cart">add to cart</a>
+											</div>
+										</div>
+									</div>
+									<div class="preview" data-target="p-7">
+										<button class="scrollable-button previous" ng-click="previousImage3()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage3()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage3}}" alt="">
+										<h3>skin illusion</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>this product helps to brighten the face and bring out it's natural beauty</p>
+										<div class="price">&#8358;5500</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-8">
+										<button class="scrollable-button previous" ng-click="previousImage4()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage4()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage4}}" alt="">
+										<h3>Supra Volume Mascara</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Double volume effect mascara that creates an intense, full, fanned-out lash look in one quick coat.</p>
+										<div class="price">&#8358;6000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-9">
+										<button class="scrollable-button previous" ng-click="previousImage5()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage5()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage5}}" alt="">
+										<h3>Graphik Ink Liner Liquid Eyeliner Pen</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>High-precision liquid eyeliner delivers intense, transfer-proof color.</p>
+										<div class="price">&#8358;7000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-10">
+										<button class="scrollable-button previous" ng-click="previousImage6()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage6()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage6}}" alt="">
+										<h3>Lip Comfort Oil</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Nourishing lip oil enriched with a trio of plant oils to nourish, comfort, and visibly plump lips</p>
+										<div class="price">&#8358;7600</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-11">
+										<button class="scrollable-button previous" ng-click="previousImage7()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage7()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage7}}" alt="">
+										<h3>Instant Eye Make-Up Remover</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Ultra-gentle, bi-phase makeup remover that dissolves long-wear and waterproof eye makeup.</p>
+										<div class="price">&#8358;9000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-12">
+										<button class="scrollable-button previous" ng-click="previousImage8()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage8()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage8}}" alt="">
+										<h3>Everlasting Concealer</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Lightweight, long-wearing, matte concealer that provides full coverage for dark circles and imperfections</p>
+										<div class="price">&#8358;4900</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-13">
+										<button class="scrollable-button previous" ng-click="previousImage9()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage9()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage9}}" alt="">
+										<h3>Eau Extraordinaire Spray</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fa-regular fa-star"></i>
+										</div>
+										<p>Mood-boosting treatment fragrance that hydrates, invigorates, and perfumes skin with aromatic essential oils.</p>
+										<div class="price">&#8358;4900</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-14">
+										<button class="scrollable-button previous" ng-click="previousImage10()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage10()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage10}}" alt="">
+										<h3>Eau Ressourçante Spray</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+										<p>fragrance with aromatherapy properties that refreshes, soothes, and perfumes skin with aromatic essential oils.</p>
+										<div class="price">&#8358;4900</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-15">
+										<button class="scrollable-button previous" ng-click="previousImage11()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage11()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage11}}" alt="">
+										<h3>Eau Dynamisante Spray</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</div>
+										<p>Energizing treatment fragrance that hydrates, revitalizes, and perfumes skin with aromatic essential oils.</p>
+										<div class="price">&#8358;4900</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-17">
+										<button class="scrollable-button previous" ng-click="previousImage12()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage12()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage12}}" alt="">
+										<h3>Invigorating Shine Hair Conditioner</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Detangling cream conditioner that nourishes.</p>
+										<div class="price">&#8358;8000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-18">
+										<button class="scrollable-button previous" ng-click="previousImage13()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage13()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage13}}" alt="">
+										<h3>Nourishing Shampoo Bar</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Eco-friendly shampoo bar provides nourishment, hydration, protection and shine for all hair types.</p>
+										<div class="price">&#8358;7000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-19">
+										<button class="scrollable-button previous" ng-click="previousImage14()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage14()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage14}}" alt="">
+										<h3>Nourishing Beauty Hair Oil with Camellia Oil</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Lightweight hair oil that nourishes and helps shield against heat damage.</p>
+										<div class="price">&#8358;7500</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-20">
+										<button class="scrollable-button previous" ng-click="previousImage15()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage15()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage15}}" alt="">
+										<h3>ClarinsMen Smooth Shave Foaming Gel</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>Creamy mousse shave gel allows a comfortable shave.</p>
+										<div class="price">&#8358;8500</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+									<div class="preview" data-target="p-21">
+										<button class="scrollable-button previous" ng-click="previousImage16()">
+											<i class="fa-solid fa-arrow-left fa-fade fa-xl"></i>
+										</button>
+										<button class="scrollable-button next" ng-click="nextImage16()">
+											<i class="fa-solid fa-arrow-right fa-fade fa-xl"></i>
+										</button>
+										<i class="fa-solid fa-xmark"></i>
+										<img src="{{currentImage16}}" alt="">
+										<h3>ClarinsMen Shampoo & Shower</h3>
+										<div class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<p>2-in-1 invigorating hair and body wash for men that cleanses from head to toe.</p>
+										<div class="price">&#8358;9000</div>
+										<div class="buttons">
+											<a href="#" class="buy">buy now</a>
+											<a href="#" class="cart">add to cart</a>
+										</div>
+									</div>
+								</div>
+							</div>
+              
+							<!--GALLERY-->
+							<div class="container gallery" id="gallery">
+								<h2>GALLERY</h2>
+								<h4>Section of viewable products - perfumes - creams - makeups - body.</h4>
+								<ul class="controls">
+									<li class="buttons active" data-filter="all">All</li>
+									<li class="buttons" data-filter="perfume">Perfumes</li>
+									<li class="buttons" data-filter="cream">Body Creams</li>
+									<li class="buttons" data-filter="makeup">Makeups</li>
+									<li class="buttons" data-filter="men">Men</li>
+								</ul>
+								<div class="image-container">
+									<div class="infos">
+										<a href="clarins-pictures/perf2.jpg" class=" image perfume">
+											<div class="info"></div>
+											<img src="clarins-pictures/perf2.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/perf.jpg" class=" image perfume">
+											<div class="info"></div>
+											<img src="clarins-pictures/perf.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/deodorant.jpg" class=" image perfume">
+											<div class="info"></div>
+											<img src="clarins-pictures/deodorant.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/hand-cream2.jpg" class=" image cream">
+											<div class="info"></div>
+											<img src="clarins-pictures/hand-cream2.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/foot-cream.jpg" class=" image cream">
+											<div class="info"></div>
+											<img src="clarins-pictures/foot-cream.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/hand-cream.jpg" class=" image cream">
+											<div class="info"></div>
+											<img src="clarins-pictures/hand-cream.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/brush.jpg" class="image makeup">
+											<div class="info"></div>
+											<img src="clarins-pictures/brush.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/eye-brows.jpg" class=" image makeup">
+											<div class="info"></div>
+											<img src="clarins-pictures/lip-balm.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/eye-brows.jpg" class=" image makeup">
+											<div class="info"></div>
+											<img src="clarins-pictures/eye-brows.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/eye-cream.jpg" class="image men">
+											<div class="info"></div>
+											<img src="clarins-pictures/eye-cream.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/shave-oil.jpg" class=" image men">
+											<div class="info"></div>
+											<img src="clarins-pictures/shave-oil.jpg" alt="">
+										</a>
+									</div>
+									<div class="infos">
+										<a href="clarins-pictures/men-hand.jpg" class=" image men">
+											<div class="info"></div>
+											<img src="clarins-pictures/men-hand.jpg" alt="">
+										</a>
+									</div>
+									<!------jquary CDN link--->
+									<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+									<!--magnific popup js cdn link-->
+									<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+								</div>
+							</div>
+							
+							<!-- About Us -->
+							<section id="Aboutus" class="ABOUT container-fluid">
+								<div class="about-section">
+									<div class="inner-container">
+										<h1>About Us</h1>
+										<p style="color: black;"> ...Clarins is a French brand of skincare for the face and body. With a genuine passion to deliver real and natural beauty solutions, the brand started with a beauty spa and its own product line. With more than 60 years in the industry and close communication with consumers, Clarins is a reference in premium beauty - with a wide catalog that offers skincare solutions for the face and body, makeup and fragrances. There are some iconic products that stand from the catalog, such as the face oils, the unique Double Serum and also body treatments that represent the essence of the brand - every product conveys expertise and top performance of Clarins beauty solutions. </p>
+							</section>
+							<!-- About Us ends here -->
+
+              <!-- Form text File-->
+							<div id="form">
+								<div class="cext container">
+									<!--Add few elements to the form-->
+									<h1 style="color: #e82f2f; font-family: 'Pacifico';">CLARINS FORM</h1>
+									<div class="cext">
+										<input type="text" id="txtName" placeholder="Enter your name" />
+									</div>
+									<div class="cext">
+										<input type="text" id="txtAge" placeholder="Enter your age" />
+									</div>
+									<div class="cext">
+										<input type="text" id="txtEmail" placeholder="Enter your email address" />
+									</div>
+									<div class="cext">
+										<select id="selCountry">
+											<option>select country</option>
+											<option value="AF">Afghanistan</option>
+											<option value="AX">Aland Islands</option>
+											<option value="AL">Albania</option>
+											<option value="DZ">Algeria</option>
+											<option value="AS">American Samoa</option>
+											<option value="AD">Andorra</option>
+											<option value="AO">Angola</option>
+											<option value="AI">Anguilla</option>
+											<option value="AQ">Antarctica</option>
+											<option value="AG">Antigua and Barbuda</option>
+											<option value="AR">Argentina</option>
+											<option value="AM">Armenia</option>
+											<option value="AW">Aruba</option>
+											<option value="AU">Australia</option>
+											<option value="AT">Austria</option>
+											<option value="AZ">Azerbaijan</option>
+											<option value="BS">Bahamas</option>
+											<option value="BH">Bahrain</option>
+											<option value="BD">Bangladesh</option>
+											<option value="BB">Barbados</option>
+											<option value="BY">Belarus</option>
+											<option value="BE">Belgium</option>
+											<option value="BZ">Belize</option>
+											<option value="BJ">Benin</option>
+											<option value="BM">Bermuda</option>
+											<option value="BT">Bhutan</option>
+											<option value="BO">Bolivia</option>
+											<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+											<option value="BA">Bosnia and Herzegovina</option>
+											<option value="BW">Botswana</option>
+											<option value="BV">Bouvet Island</option>
+											<option value="BR">Brazil</option>
+											<option value="IO">British Indian Ocean Territory</option>
+											<option value="BN">Brunei Darussalam</option>
+											<option value="BG">Bulgaria</option>
+											<option value="BF">Burkina Faso</option>
+											<option value="BI">Burundi</option>
+											<option value="KH">Cambodia</option>
+											<option value="CM">Cameroon</option>
+											<option value="CA">Canada</option>
+											<option value="CV">Cape Verde</option>
+											<option value="KY">Cayman Islands</option>
+											<option value="CF">Central African Republic</option>
+											<option value="TD">Chad</option>
+											<option value="CL">Chile</option>
+											<option value="CN">China</option>
+											<option value="CX">Christmas Island</option>
+											<option value="CC">Cocos (Keeling) Islands</option>
+											<option value="CO">Colombia</option>
+											<option value="KM">Comoros</option>
+											<option value="CG">Congo</option>
+											<option value="CD">Congo, Democratic Republic of the Congo</option>
+											<option value="CK">Cook Islands</option>
+											<option value="CR">Costa Rica</option>
+											<option value="CI">Cote D'Ivoire</option>
+											<option value="HR">Croatia</option>
+											<option value="CU">Cuba</option>
+											<option value="CW">Curacao</option>
+											<option value="CY">Cyprus</option>
+											<option value="CZ">Czech Republic</option>
+											<option value="DK">Denmark</option>
+											<option value="DJ">Djibouti</option>
+											<option value="DM">Dominica</option>
+											<option value="DO">Dominican Republic</option>
+											<option value="EC">Ecuador</option>
+											<option value="EG">Egypt</option>
+											<option value="SV">El Salvador</option>
+											<option value="GQ">Equatorial Guinea</option>
+											<option value="ER">Eritrea</option>
+											<option value="EE">Estonia</option>
+											<option value="ET">Ethiopia</option>
+											<option value="FK">Falkland Islands (Malvinas)</option>
+											<option value="FO">Faroe Islands</option>
+											<option value="FJ">Fiji</option>
+											<option value="FI">Finland</option>
+											<option value="FR">France</option>
+											<option value="GF">French Guiana</option>
+											<option value="PF">French Polynesia</option>
+											<option value="TF">French Southern Territories</option>
+											<option value="GA">Gabon</option>
+											<option value="GM">Gambia</option>
+											<option value="GE">Georgia</option>
+											<option value="DE">Germany</option>
+											<option value="GH">Ghana</option>
+											<option value="GI">Gibraltar</option>
+											<option value="GR">Greece</option>
+											<option value="GL">Greenland</option>
+											<option value="GD">Grenada</option>
+											<option value="GP">Guadeloupe</option>
+											<option value="GU">Guam</option>
+											<option value="GT">Guatemala</option>
+											<option value="GG">Guernsey</option>
+											<option value="GN">Guinea</option>
+											<option value="GW">Guinea-Bissau</option>
+											<option value="GY">Guyana</option>
+											<option value="HT">Haiti</option>
+											<option value="HM">Heard Island and Mcdonald Islands</option>
+											<option value="VA">Holy See (Vatican City State)</option>
+											<option value="HN">Honduras</option>
+											<option value="HK">Hong Kong</option>
+											<option value="HU">Hungary</option>
+											<option value="IS">Iceland</option>
+											<option value="IN">India</option>
+											<option value="ID">Indonesia</option>
+											<option value="IR">Iran, Islamic Republic of</option>
+											<option value="IQ">Iraq</option>
+											<option value="IE">Ireland</option>
+											<option value="IM">Isle of Man</option>
+											<option value="IL">Israel</option>
+											<option value="IT">Italy</option>
+											<option value="JM">Jamaica</option>
+											<option value="JP">Japan</option>
+											<option value="JE">Jersey</option>
+											<option value="JO">Jordan</option>
+											<option value="KZ">Kazakhstan</option>
+											<option value="KE">Kenya</option>
+											<option value="KI">Kiribati</option>
+											<option value="KP">Korea, Democratic People's Republic of</option>
+											<option value="KR">Korea, Republic of</option>
+											<option value="XK">Kosovo</option>
+											<option value="KW">Kuwait</option>
+											<option value="KG">Kyrgyzstan</option>
+											<option value="LA">Lao People's Democratic Republic</option>
+											<option value="LV">Latvia</option>
+											<option value="LB">Lebanon</option>
+											<option value="LS">Lesotho</option>
+											<option value="LR">Liberia</option>
+											<option value="LY">Libyan Arab Jamahiriya</option>
+											<option value="LI">Liechtenstein</option>
+											<option value="LT">Lithuania</option>
+											<option value="LU">Luxembourg</option>
+											<option value="MO">Macao</option>
+											<option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+											<option value="MG">Madagascar</option>
+											<option value="MW">Malawi</option>
+											<option value="MY">Malaysia</option>
+											<option value="MV">Maldives</option>
+											<option value="ML">Mali</option>
+											<option value="MT">Malta</option>
+											<option value="MH">Marshall Islands</option>
+											<option value="MQ">Martinique</option>
+											<option value="MR">Mauritania</option>
+											<option value="MU">Mauritius</option>
+											<option value="YT">Mayotte</option>
+											<option value="MX">Mexico</option>
+											<option value="FM">Micronesia, Federated States of</option>
+											<option value="MD">Moldova, Republic of</option>
+											<option value="MC">Monaco</option>
+											<option value="MN">Mongolia</option>
+											<option value="ME">Montenegro</option>
+											<option value="MS">Montserrat</option>
+											<option value="MA">Morocco</option>
+											<option value="MZ">Mozambique</option>
+											<option value="MM">Myanmar</option>
+											<option value="NA">Namibia</option>
+											<option value="NR">Nauru</option>
+											<option value="NP">Nepal</option>
+											<option value="NL">Netherlands</option>
+											<option value="AN">Netherlands Antilles</option>
+											<option value="NC">New Caledonia</option>
+											<option value="NZ">New Zealand</option>
+											<option value="NI">Nicaragua</option>
+											<option value="NE">Niger</option>
+											<option value="NG">Nigeria</option>
+											<option value="NU">Niue</option>
+											<option value="NF">Norfolk Island</option>
+											<option value="MP">Northern Mariana Islands</option>
+											<option value="NO">Norway</option>
+											<option value="OM">Oman</option>
+											<option value="PK">Pakistan</option>
+											<option value="PW">Palau</option>
+											<option value="PS">Palestinian Territory, Occupied</option>
+											<option value="PA">Panama</option>
+											<option value="PG">Papua New Guinea</option>
+											<option value="PY">Paraguay</option>
+											<option value="PE">Peru</option>
+											<option value="PH">Philippines</option>
+											<option value="PN">Pitcairn</option>
+											<option value="PL">Poland</option>
+											<option value="PT">Portugal</option>
+											<option value="PR">Puerto Rico</option>
+											<option value="QA">Qatar</option>
+											<option value="RE">Reunion</option>
+											<option value="RO">Romania</option>
+											<option value="RU">Russian Federation</option>
+											<option value="RW">Rwanda</option>
+											<option value="BL">Saint Barthelemy</option>
+											<option value="SH">Saint Helena</option>
+											<option value="KN">Saint Kitts and Nevis</option>
+											<option value="LC">Saint Lucia</option>
+											<option value="MF">Saint Martin</option>
+											<option value="PM">Saint Pierre and Miquelon</option>
+											<option value="VC">Saint Vincent and the Grenadines</option>
+											<option value="WS">Samoa</option>
+											<option value="SM">San Marino</option>
+											<option value="ST">Sao Tome and Principe</option>
+											<option value="SA">Saudi Arabia</option>
+											<option value="SN">Senegal</option>
+											<option value="RS">Serbia</option>
+											<option value="CS">Serbia and Montenegro</option>
+											<option value="SC">Seychelles</option>
+											<option value="SL">Sierra Leone</option>
+											<option value="SG">Singapore</option>
+											<option value="SX">Sint Maarten</option>
+											<option value="SK">Slovakia</option>
+											<option value="SI">Slovenia</option>
+											<option value="SB">Solomon Islands</option>
+											<option value="SO">Somalia</option>
+											<option value="ZA">South Africa</option>
+											<option value="GS">South Georgia and the South Sandwich Islands</option>
+											<option value="SS">South Sudan</option>
+											<option value="ES">Spain</option>
+											<option value="LK">Sri Lanka</option>
+											<option value="SD">Sudan</option>
+											<option value="SR">Suriname</option>
+											<option value="SJ">Svalbard and Jan Mayen</option>
+											<option value="SZ">Swaziland</option>
+											<option value="SE">Sweden</option>
+											<option value="CH">Switzerland</option>
+											<option value="SY">Syrian Arab Republic</option>
+											<option value="TW">Taiwan, Province of China</option>
+											<option value="TJ">Tajikistan</option>
+											<option value="TZ">Tanzania, United Republic of</option>
+											<option value="TH">Thailand</option>
+											<option value="TL">Timor-Leste</option>
+											<option value="TG">Togo</option>
+											<option value="TK">Tokelau</option>
+											<option value="TO">Tonga</option>
+											<option value="TT">Trinidad and Tobago</option>
+											<option value="TN">Tunisia</option>
+											<option value="TR">Turkey</option>
+											<option value="TM">Turkmenistan</option>
+											<option value="TC">Turks and Caicos Islands</option>
+											<option value="TV">Tuvalu</option>
+											<option value="UG">Uganda</option>
+											<option value="UA">Ukraine</option>
+											<option value="AE">United Arab Emirates</option>
+											<option value="GB">United Kingdom</option>
+											<option value="US">United States</option>
+											<option value="UM">United States Minor Outlying Islands</option>
+											<option value="UY">Uruguay</option>
+											<option value="UZ">Uzbekistan</option>
+											<option value="VU">Vanuatu</option>
+											<option value="VE">Venezuela</option>
+											<option value="VN">Viet Nam</option>
+											<option value="VG">Virgin Islands, British</option>
+											<option value="VI">Virgin Islands, U.s.</option>
+											<option value="WF">Wallis and Futuna</option>
+											<option value="EH">Western Sahara</option>
+											<option value="YE">Yemen</option>
+											<option value="ZM">Zambia</option>
+											<option value="ZW">Zimbabwe</option>
+										</select>
+									</div>
+									<div class="cext">
+										<textarea id="msg" name="msg" placeholder="Write some message ..." style="height: 100px;"></textarea>
+									</div>
+									<div class="cext">
+										<input type="button" id="bt" value="SUBMIT" onclick="saveFile()" />
+									</div>
+								</div>
+							</div>
+							<!-- Form text File ends here -->
+              <br>
+							<br>
+              <br>
+							<!-- Map  -->
+							<h1 class="map-title" id="map">OUR LOCATION</h1>
+							<div class="map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.261830396231!2d3.355944014522451!3d6.614356395216851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93b65ba86e15%3A0x3ae060fb3436c3ad!2sIkeja%20City%20Mall!5e0!3m2!1sen!2sng!4v1664194478043!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+							<!-- Map ends here -->
+							<!-- Footer -->
+							<!-- Contacts -->
+							<div class="footer">
+								<div class="footer1">
+									<div class="cont" id="contactUs">
+										<h1 style=" margin-bottom:30px ;">Contact Us</h1>
+
+										<p>
+											<i class='bx bxs-location-plus bx-tada'></i>
+											<span style="color:  rgb(255, 0, 0);"> OUR ADDRESS:</span> No. 112 allen Avenue, Ikeja, <br>Lagos, Nigeria.
+										</p>
+										<p>
+											<i class='bx bxs-phone-call bx-tada'></i>
+											<span style="color:  rgb(255, 0, 0);"> PHONE:</span> 09032549638
+										</p>
+										<p>
+											<i class='bx bxs-envelope bx-fade-left'></i>
+											<span style="color:  rgb(255, 0, 0);">EMAIL:</span> ClarinsNG@gmail.com
+										</p>
+									</div>
+									<!-- Contacts ends here-->
+									<div class="cont">
+										<h4 class="head">
+											<!------Geolocation html starts here-->
+											<!-----html for Date and Time starts here-->
+											<marquee scrollamount = "" >
+												<p id="time"></p>
+											</marquee>
+											<!-----html for Date and Time ends here-->
+									</div>
+									<script>
+										function updateTime() {
+                      const now = new Date();
+                      const hours = now.getHours();
+                      const minutes = now.getMinutes();
+                      const seconds = now.getSeconds();
+                      const date = now.toDateString();
+                      
+                      // get the time zone abbreviation or name
+                      const timezoneOffset = now.getTimezoneOffset();
+                      const timezoneOffsetHours = Math.abs(Math.floor(timezoneOffset / 60));
+                      const timezoneOffsetMinutes = Math.abs(timezoneOffset % 60);
+                      const timezoneAbbreviation = timezoneOffset >= 0 ? `GMT-${timezoneOffsetHours}:${timezoneOffsetMinutes}` : `GMT+${timezoneOffsetHours}:${timezoneOffsetMinutes}`;
+
+                      // get the user's location
+                      const url = 'https://ipapi.co/json/';
+                      fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                          const city = data.city;
+                          const country = data.country_name;
+                          const location = `${city}, ${country}`;
+                          const time = `${hours}:${minutes}:${seconds} ${timezoneAbbreviation}`;
+                          const dateTime = `${date} ${time} (${location})`;
+
+                          document.getElementById("time").textContent = dateTime;
+                        })
+                        .catch(error => {
+                          console.error('Error fetching location:', error);
+                        });
+                    }
+
+                    // update the time and location every second
+                    setInterval(updateTime, 1000);
+
+
+									</script>
+								</div>
+								<div class="footer2">
+									<p> C 2023 CLARINS SKINCARE&#174; @All Rights Reserved-2023-purchase</p>
+								</div>
+							</div>
+							<!-- Footer ends here-->
+							<script src="Javascript folder/visitor-count.js"></script>
+							<script src="Javascript folder/slideshow.js"></script>
+							<script src="Javascript folder/popup.js"></script>
+							<script src="Javascript folder/gallery.js"></script>
+							<script src="Javascript folder/form.js"></script>
+              				<script src="Javascript folder/hamburger.js"></script>
+	</body>
+</html>

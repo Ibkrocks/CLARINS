@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@nicky-lenaers/ngx-scroll-to": "^14.0.0"
+  }
+}
